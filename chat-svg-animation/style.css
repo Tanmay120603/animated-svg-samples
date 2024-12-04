@@ -1,0 +1,63 @@
+.chat-svg *{
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.chat-box-animate{
+    animation: 0.8s alternate chatScale forwards;
+}
+
+.box-2{
+    animation-delay: 2.4s;
+}
+
+.chat-line-animate{
+    transform-origin: -10%;
+    animation: lineScale 0.8s linear forwards;
+}
+
+.box1-line1{
+    animation-delay: 0.8s;
+}
+.box1-line2{
+    animation-delay: 1.6s;
+}
+.box2-line1{
+    animation-delay: 3.2s;
+}
+.box2-line2{
+    animation-delay: 4s;
+}
+
+.hide-chat{
+    animation: hide 0.3s linear;
+}
+
+@keyframes lineScale{
+    from{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes chatScale{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes hide{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}

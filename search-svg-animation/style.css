@@ -1,0 +1,47 @@
+.search-svg *{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+[id^="content-"]{
+    animation: 1.5s alternate infinite glow;
+}
+
+#magnifying-glass{
+    animation: 1.5s alternate infinite search;
+}
+
+#hand{
+    animation: 1.5s alternate infinite handmove;
+}
+
+@keyframes search{
+    from{
+        transform: rotate(0deg);
+        translate: 0px 0px;
+    }
+    to{
+        transform: rotate(90deg);
+        translate: 0px -120px;
+    }
+}
+
+@keyframes glow{
+    from{
+        fill: #f0f0f0;
+    }
+    to{
+        fill: #c0c0c0;
+    }
+}
+
+@keyframes handmove{
+    from{
+        transform: rotate(0deg);
+        translate: 0px 0px;
+    }
+    to{
+        transform:rotate(45deg);
+        translate: 0px -25px;
+    }
+}

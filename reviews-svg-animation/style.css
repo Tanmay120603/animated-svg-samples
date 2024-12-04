@@ -1,0 +1,118 @@
+.reviews-svg-animation *{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+.star{
+    stroke: black;
+    fill: transparent;
+    stroke-width: 1px;
+}
+
+.hand-star{
+    stroke: white;
+    stroke-dasharray: 110.57635498046875px;
+    stroke-dashoffset: -110.57635498046875px;
+    animation: draw-path 1s ease 6.5s forwards, fill-path-green 1s ease 7.5s forwards,rotate-star 0.5s ease 9.9s forwards,fade-star 0.1s ease 10.5s forwards;
+}
+.rating-star{
+    stroke-dasharray: 263.2110595703125px;
+    stroke-dashoffset: -263.2110595703125px;
+}
+
+.rating-star-box-1{
+    animation: draw-path 1s ease 1s forwards, fill-path-green 1s ease 2s forwards;
+}
+
+.rating-star-box-2{
+    animation: draw-path 1s ease 4s forwards, fill-path-green 1s ease 5s forwards;
+}
+
+#rating-box-1>.star-05{
+    animation: draw-path 1s ease 1s forwards,fill-path-green 0.3s ease 10.6s forwards;
+}
+
+.box-outline{
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 2283.37548828125px;
+    stroke-dashoffset: -2283.37548828125px;
+}
+
+.box-1-outline{
+    animation: draw-path 1s ease forwards;
+}
+
+.box-2-outline{
+    animation: draw-path 1s ease 3s forwards;
+}
+
+.course2-line{
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: 0%;
+    animation: lineScale 1s ease 6s forwards;
+}
+
+.course1-line{
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: 0%;
+    animation: lineScale 1s ease 5s forwards;
+}
+
+.hand-with-star{
+    animation: move-hand 2s ease 8.3s forwards;
+}
+.hand-with-star-parent{
+    animation: rotate-hand 2s ease 8.3s forwards;
+}
+
+@keyframes draw-path{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes fill-path-green{
+    to{
+        fill: #63FF7E;
+    }
+}
+
+@keyframes lineScale{
+    from{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes move-hand{
+    50%{
+        transform: translate(-30px,-50px);
+    }
+    100%{
+        transform: translate(-40px,-100px);
+    }
+}
+@keyframes rotate-hand{
+    50%{
+        transform: rotate(60deg);
+    }
+    100%{
+        transform: rotate(130deg);
+    }
+}
+@keyframes fade-star{
+    to{
+        opacity: 0;
+    }
+}
+@keyframes rotate-star{
+    to{
+        transform: rotate(10deg);
+    }
+}

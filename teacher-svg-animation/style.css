@@ -1,0 +1,70 @@
+.teacher-svg-animation *{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+.left-hand{
+    animation: rotate-hand 1s ease forwards;
+    transform: rotate(60deg);
+}
+
+.marksheet-page{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2px;
+    stroke-dasharray: 356.4072265625px;
+    stroke-dashoffset: -356.4072265625px;
+    animation: draw-path 1s ease 1s forwards, fill-white 0.5s ease 2s forwards;
+}
+
+.content{
+    stroke: black;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke-dasharray: 118.61821746826172px;
+    stroke-dashoffset: -118.61821746826172px;
+    animation: draw-path 1s ease 2.5s forwards, fill-green 1s ease 3.5s forwards;
+}
+
+.date{
+    stroke-dasharray: 40.75783157348633px;
+    stroke-dashoffset: -40.75783157348633px;
+}
+
+.grade{
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.grade-circle{
+    stroke-dasharray:  214.87818908691406px;
+    stroke-dashoffset: -214.87818908691406px;
+    animation: draw-path 1s ease 3s forwards;
+}
+
+.A-grade{
+    stroke: #000;
+    stroke-dasharray: 91.41737365722656px;
+    stroke-dashoffset: -91.41737365722656px;
+    animation: draw-path 1s ease 3s forwards,fill-green 0.2s ease 4s forwards;
+}
+
+@keyframes rotate-hand{
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes draw-path{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes fill-white{
+    to{
+        fill: #ffffff;
+    }
+}
+@keyframes fill-green{
+    to{
+        fill: #63FF7E;
+    }
+}

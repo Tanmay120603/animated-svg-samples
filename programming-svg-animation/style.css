@@ -1,0 +1,118 @@
+.programming-svg *{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+[id^="code-"]{
+    transform-origin: 0%;
+    transform: scaleX(0);
+    animation: coding 1s linear forwards;
+}
+
+#code-01{
+    animation-delay: 1s;
+}
+#code-02{
+    animation-delay: 2s;
+}
+#code-03{
+    animation-delay: 3s;
+}
+#code-04{
+    animation-delay: 4s;
+}
+#code-05{
+    animation-delay: 5s;
+}
+#code-06{
+    animation-delay: 6s;
+}
+#code-07{
+    animation-delay: 7s;
+}
+#code-08{
+    animation-delay: 8s;
+}
+
+#body{
+    animation: body-move 1s alternate 1s 8;
+}
+
+.code-output{
+    stroke: #000000;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke-dasharray: 3431.5693359375px;
+    stroke-dashoffset: -3431.5693359375px;
+    animation: draw-path 1s alternate 9.2s forwards, fill-path 1s alternate 10.2s forwards;
+}
+
+#hand{
+    animation: hand-move 0.5s alternate 1s 16;
+}
+
+#head-parent{
+    animation: head-turn 1s alternate 9s 1 forwards
+}
+
+#head{
+    animation: head-rotate 1s alternate 1 forwards;
+}
+
+@keyframes hand-move{
+    from{
+        translate: 0px 0px;
+        transform: rotate(0deg);
+    }
+    to{
+        translate: 10px 0px;
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes body-move{
+    from{
+        translate: 0px 0px;
+        transform: rotate(0deg);
+    }
+    to{
+        translate: 2px 0px;
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes coding{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes head-turn{
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(-1, 1);
+    }
+}
+@keyframes head-rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(15deg);
+    }
+}
+@keyframes draw-path{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes fill-path{
+    to{
+        fill: #000000;
+    }
+}

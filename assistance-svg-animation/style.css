@@ -1,0 +1,109 @@
+.ai-assistance-svg *{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.question-part{
+    stroke: black;
+    stroke-width: 4px;
+    fill: transparent;
+}
+
+.chat-box{
+    stroke-dasharray: 807.427001953125px;
+    stroke-dashoffset: -807.427001953125px;
+    fill: transparent;
+    stroke: #000000;
+    stroke-width: 4px;
+    animation: draw-path 1s ease 6s forwards, fill-path-green 1s ease 7s forwards;
+}
+
+.chat-box-inner-text{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 1612.7724609375px;
+    stroke-dashoffset: -1612.7724609375px;
+    animation: draw-path 1s ease 7.2s forwards,fill-black 1s ease 8.2s forwards;
+}
+
+.question-ball{
+    stroke-dasharray: 289.0675048828125px;
+    stroke-dashoffset: -289.0675048828125px;
+    animation: draw-path 1s ease forwards, fill-path 1s ease 1s forwards;
+}
+
+.question-curve{
+    stroke-dasharray: 1351.896240234375px;
+    stroke-dashoffset: -1351.896240234375px;
+    animation: draw-path 1s ease 2s forwards, fill-path 1s ease 3s forwards;
+}
+
+.signal-dot{
+    fill: #f1f1f1;
+}
+
+.signal-dot-03{
+    animation: fill-red 1s alternate 5s;
+}
+
+.signal-dot-02{
+    animation: fill-blue 1s alternate 6s;
+}
+
+.signal-dot-01{
+    animation: fill-path-green 1s alternate 7s forwards;
+}
+
+.decorate-ball{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 147.67605590820312px;
+    stroke-dashoffset: -147.67605590820312px;
+    animation: draw-path 1s ease forwards, fill-path-green 1s ease 1s forwards;
+}
+
+.decorate-line{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 3266.01318359375px;
+    stroke-dashoffset: -3266.01318359375px;
+    animation: draw-path 1.5s ease 4s forwards, fill-black 0.5s ease 5.5s forwards;
+}
+
+@keyframes draw-path{
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes fill-path{
+    to{
+        fill:#b1b6bc;
+    }
+}
+
+@keyframes fill-path-green{
+    to{
+        fill: #63FF7E;
+    }
+}
+
+@keyframes fill-red{
+    to{
+        fill: rgb(255, 0, 0);
+    }
+}
+
+@keyframes fill-blue{
+    to{
+        fill: rgb(0, 0, 255);
+    }
+}
+@keyframes fill-black{
+    to{
+        fill: #000000;
+    }
+}
